@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Календарь</title>
+    <link rel="stylesheet" href="page2.css">
+</head>
+
+<body>
+    <header>
+        <nav class="dws-menu">
+            <div class="menu" id="center">
+                <a href="indexq.html"><i class="fa.fa-"></i>Главная</a>
+                <a href="hospital.html"><i class="fa.fa-"></i>Медицина</a>
+                <a href="#"><i class="fa.fa-"></i>Развлечения</a>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="calendar">
+            <div class="month">
+                <div class="prev">
+                    <span>&#10094</span>
+                </div>
+                <div>
+                    <h2>Март</h2>
+                    <p> Март 03 2020</p>
+                </div>
+                <div class="next">
+                    <span>&#10095</span>
+                </div>
+            </div>
+            <div class="weekends">
+                <div>Пн</div>
+                <div>Вт</div>
+                <div>Ср</div>
+                <div>Чт</div>
+                <div>Пн</div>
+                <div>Сб</div>
+                <div>Вс</div>
+            </div>
+            <div id="days" class="days">
+                <div class="prev-month">24</div>
+                <div class="prev-month">25</div>
+                <div class="prev-month">26</div>
+                <div class="prev-month">27</div>
+                <div class="prev-month">28</div>
+                <div class="prev-month">29</div>
+
+                <div class="current-month">1</div>
+                <div class="current-month">2</div>
+                <div class="current-month">3</div>
+                <div class="current-month">4</div>
+                <div class="current-month">5</div>
+                <div class="current-month">6</div>
+                <div class="current-month">7</div>
+                <div class="current-month">8</div>
+                <div class="current-month">9</div>
+                <div class="current-month">10</div>
+                <div class="current-month">11</div>
+                <div class="current-month">12</div>
+                <div class="current-month">13</div>
+                <div class="current-month">14</div>
+                <div class="current-month">15</div>
+                <div class="current-month">16</div>
+                <div class="current-month">17</div>
+                <div class="current-month">18</div>
+                <div class="current-month">19</div>
+                <div class="current-month">20</div>
+                <div class="current-month">21</div>
+                <div class="current-month">22</div>
+                <div class="current-month">23</div>
+                <div class="current-month">24</div>
+                <div class="current-month">25</div>
+                <div class="current-month">26</div>
+                <div class="current-month">27</div>
+                <div class="current-month">28</div>
+                <div class="current-month">29</div>
+                <div class="current-month">30</div>
+                <div class="current-month">31</div>
+
+                <div class="next-month">1</div>
+                <div class="next-month">2</div>
+                <div class="next-month">3</div>
+                <div class="next-month">4</div>
+                <div class="next-month">5</div>
+
+            </div>
+            <!-- <div id="times" class="hidden">
+        <div class="talons">11:00</div>
+        <div class="talons">12:00</div>
+        <div class="talons">13:00</div>
+        <div class="talons">14:00</div>
+        <div class="talons">15:00</div>
+        <div class="talons">16:00</div>
+        <div class="talons">17:00</div>
+        <div class="talons">18:00</div>
+        <div class="talons">19:00</div>
+       </div> -->
+        
+       <!-- скрыл  блок который показывался и вставил появляющийся по клику на день текущего месяца-->
+            <div id="curretn-day-shedule" class="curretn-day-shedule hidden">
+                <div id="message" class="message">
+                    <!-- временный блок для показа работспособности -->
+                    <div class="talons">11:00</div>
+                    <div class="talons">12:00</div>
+                    <div class="talons">13:00</div>
+                    <div class="talons">14:00</div>
+                    <div class="talons">15:00</div>
+                    <div class="talons">16:00</div>
+                    <div class="talons">17:00</div>
+                    <div class="talons">18:00</div>
+                    <div class="talons">19:00</div>
+                    <button id="close-current-btn" class="btn-close">OK</button>
+                </div>
+            </div>
+    <script src="calendar.js"></script>

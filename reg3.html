@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Вход1</title>
+    <style>
+        body {
+            background: rgb(178, 221, 187) url("white.jpg");
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+        }
+        .signup{
+            background: rgba(44, 62, 80, 0.7);
+            padding: 40px;
+            width: 250px;
+            margin: auto;
+            margin-top: 80px;
+            height: 450px;
+            margin-left: 180px;
+            margin: 0 auto;
+            margin-top: 90px;
+        }
+        form{
+            width: 240px;
+            text-align: center;
+        }
+        input{
+        width: 240px;
+        text-align: center;
+        background: transparent;
+        border-bottom: 1px solid #fff;
+        font-family: 'Play', sans-serif;
+        font-size: 16px;
+        font-weight: 10px 0;
+        padding: 10px 0;
+        transition: border 0.5s;
+        outline: none;
+        color: #fff;
+        }
+    input[type=button]{
+        border: none;
+        width: 190px;
+        background: white;
+        color: #000;
+        font-size: 16px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    input[type=button]:hover{
+        color: #fff;
+        background-color: black;
+    }
+    h2{
+        color:white;
+    }
+    ::placeholder{
+        color: aliceblue;
+        opacity: 0.8;
+    }
+    #msg {
+        visibility: hidden;
+        min-width: 250px;
+        background-color: yellow;
+        color: #000;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        right: 30%;
+        top: 30px;
+        font-size: 17px;
+
+    }
+    #msg.show{
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+    @keyframes fadein {
+        from {top:0; opacity: 0;}
+        to{top: 30px; opacity: 1; }
+    }
+    @-webkit-keyframes fadeout {
+        from {top:0; opacity: 0;}
+        to {top: 30px; opacity: 1;}
+    }
+    @keyframes fadeout {
+        form{top: 30px; opacity: 1;}
+        to {top: 0; opacity: 0;}
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="signup">
+        <form>
+            <h2 style="color: #fff;">Зарегистрироваться</h2>
+            <input id="name" type="text" name="username" placeholder="Имя">
+            <br><br>
+            <input id="surname" type="text" name="username" placeholder="Фамилия">
+            <br><br>
+            <input id="pass" type="password" name="pass" placeholder="Пароль">
+            <br><br>
+            <input id="pass2" type="password" name="pass" placeholder="Подтвердить Пароль">
+            <br><br>
+            <input id="email" type="text" placeholder="Электронная почта">
+            <br><br>
+            <a href="hospital.html"><input type="button" value="Зарегистрироваться"></a>
+            <div id="msg">Вы успешно зарегистрировались <a href=""></a></div>
+            <script>
+                var username = document.getElementById("name");
+                var surname = document.getElementById("surname");
+                var pass = document.getElementById("pass");
+                var pass2 = document.getElementById("pass2");
+                var email = document.getElementById("email");
+
+                function main(){
+                    if(username.value.length < 2 ) {alert ('Не достаточно символов');}
+                    else if(surname.value.length < 2){alert ('Не достаточно символов');}
+                    else if(pass.value.length < 8){alert ('Не достаточно символов');}
+                    else if(pass.value.length < 8){alert ('Не верный пароль');}
+                    else if(email.value.length == 0){alert ('Не достаточно символов');}
+
+                    
+
+                    else{
+                        alert('Вы успешно зарегистрировались');
+                        }
+                    }
+
+                
+            </script>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("msg");
+                    x.className = "show";
+                    setTimeout(function(){
+                        x.className = x.className.replace("show", "");}, 3000);
+                }
+            </script>
+            Уже есть аккаунт? <a href="registration.html" style="text-decoration:none; font-family:'Play', sans-serif; color:yellow;">&nbsp; Войти</a>
+        </form>
+    </div>
+</body>
+</html>
